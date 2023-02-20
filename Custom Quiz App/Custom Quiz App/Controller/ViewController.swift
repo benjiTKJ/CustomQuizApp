@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var scoreLabel: UILabel!
@@ -20,13 +21,20 @@ class ViewController: UIViewController {
     
     var customButton = ButtonsCSS()
     var questionDB = QuestionDB()
+    var totalScore: String = "0"
     let b1 = 0
     let b2 = 1
     let b3 = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(restartUI), name: NSNotification.Name(rawValue: "PerformAfterPresenting"), object: nil)
+        updateUI()
+    }
+    
+    @objc func restartUI(){
+        questionDB.restartQuiz()
         updateUI()
     }
     
@@ -53,10 +61,28 @@ class ViewController: UIViewController {
         }else{
             sender.backgroundColor = UIColor.red
         }
-        questionDB.nextQuestion()
         
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        if(questionDB.nextQuestion()){
+            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }else{
+            self.performSegue(withIdentifier: "goToResults", sender: self)
+        }
         
+
+        
+
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResults" {
+            let destinationVC = segue.destination as! ResultsViewController
+            if(questionDB.nextQuestion() == false){
+                totalScore = String(questionDB.getScore())
+                destinationVC.totalScore = totalScore
+            }
+            
+        }
     }
     
     func setupButtonConstraints(){

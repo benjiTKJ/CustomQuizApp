@@ -16,6 +16,7 @@
 		FF54FBD12993A64D00848BB2 /* ButtonsCSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54FBD02993A64D00848BB2 /* ButtonsCSS.swift */; };
 		FF54FBD52993E15800848BB2 /* QuestionDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54FBD42993E15800848BB2 /* QuestionDB.swift */; };
 		FF54FBD82993E4BB00848BB2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54FBD72993E4BB00848BB2 /* Question.swift */; };
+		FF54FC0429A20D7600848BB2 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54FC0329A20D7600848BB2 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FF54FBD02993A64D00848BB2 /* ButtonsCSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCSS.swift; sourceTree = "<group>"; };
 		FF54FBD42993E15800848BB2 /* QuestionDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDB.swift; sourceTree = "<group>"; };
 		FF54FBD72993E4BB00848BB2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FF54FC0329A20D7600848BB2 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3B8C042990F8E300A40635 /* ViewController.swift */,
+				FF54FC0329A20D7600848BB2 /* ResultsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				FF3B8C052990F8E300A40635 /* ViewController.swift in Sources */,
 				FF3B8C012990F8E300A40635 /* AppDelegate.swift in Sources */,
 				FF3B8C032990F8E300A40635 /* SceneDelegate.swift in Sources */,
+				FF54FC0429A20D7600848BB2 /* ResultsViewController.swift in Sources */,
 				FF54FBD82993E4BB00848BB2 /* Question.swift in Sources */,
 				FF54FBD52993E15800848BB2 /* QuestionDB.swift in Sources */,
 				FF54FBD12993A64D00848BB2 /* ButtonsCSS.swift in Sources */,

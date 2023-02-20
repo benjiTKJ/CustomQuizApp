@@ -36,13 +36,16 @@ struct QuestionDB {
 
     }
     
-    mutating func nextQuestion(){
+    mutating func nextQuestion() -> Bool{
         if(questionNumber + 1 < quiz.count){
             questionNumber += 1
+            return true
+        }else if(questionNumber + 1 > quiz.count){
+            return false
         }else{
-            questionNumber = 0
-            score = 0
+            return false
         }
+        
     }
     
     mutating func getScore() -> Int{
@@ -53,4 +56,8 @@ struct QuestionDB {
         return Float(questionNumber)/Float(quiz.count)
     }
     
+    mutating func restartQuiz(){
+        questionNumber = 0
+        score = 0
+    }
 }
