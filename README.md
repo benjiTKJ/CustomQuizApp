@@ -6,8 +6,8 @@
 A simple quiz app built with Swift using the [Model View Controller(MVC)](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html) design pattern
 
 <p align="row">
-<img src= "screenshots/screenshot_1.PNG" width="640" height="1386">
-<img src= "screenshots/screenshot_2.PNG" width="600" height="1386">
+<img src= "screenshots/screenshot_1.PNG" width="400" height="1000">
+<img src= "screenshots/screenshot_2.PNG" width="400" height="1000">
 </p>
 
 # Requirements
